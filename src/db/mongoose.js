@@ -1,10 +1,8 @@
 const mongoose = require('mongoose')
+const { MONGODB_URI } = require('../config/keys')
 
-mongoose.connect(
-  'mongodb+srv://pinakidas:QvyOT0s56p7u0A60@cluster0.qhrfu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  }
-)
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+})
